@@ -141,7 +141,7 @@ body.final-sky{
   pointer-events:none;
 }
 .card{
-  background:rgba(255,255,255,.15);
+  background:rgba(255,255,255,.18);
   backdrop-filter:blur(25px);
   padding:38px;
   border-radius:28px;
@@ -367,7 +367,7 @@ setInterval(()=>{
   s.style.animationDuration=2+Math.random()*2+"s";
   document.body.appendChild(s);
   setTimeout(()=>s.remove(),5000);
-},120);
+},250);
 
 // 🌠 SHOOTING STAR
 setInterval(()=>{
@@ -386,7 +386,7 @@ setInterval(()=>{
   h.style.left=Math.random()*100+"vw";
   document.body.appendChild(h);
   setTimeout(()=>h.remove(),8000);
-},300);
+},600);
 
 // 💓 HEART BREATH
 setInterval(()=>{
@@ -407,7 +407,7 @@ setInterval(()=>{
     document.body.appendChild(b);
     setTimeout(()=>b.remove(),1400);
   }
-},450);
+},900);
 
 // 🎆 FIREWORK
 function firework(n){
@@ -465,3 +465,4 @@ function showReels(){
 
 </body>
 </html>
+
