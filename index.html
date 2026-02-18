@@ -5,6 +5,8 @@
 <title>For You ❤️</title>
 
 <style>
+  const isMobile = window.innerWidth <= 768;
+
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
@@ -360,14 +362,17 @@ function finalMoment(){
 }
 
 // ⭐ STARS
-setInterval(()=>{
+const starInt = setInterval(()=>{
+  if(isMobile && document.querySelectorAll(".star").length > 15) return;
+
   const s=document.createElement("div");
   s.className="star";
   s.style.left=Math.random()*100+"vw";
-  s.style.animationDuration=2+Math.random()*2+"s";
+  s.style.animationDuration=(isMobile?4:2)+Math.random()*2+"s";
   document.body.appendChild(s);
   setTimeout(()=>s.remove(),5000);
-},250);
+}, isMobile ? 300 : 120);
+
 
 // 🌠 SHOOTING STAR
 setInterval(()=>{
@@ -465,5 +470,6 @@ function showReels(){
 
 </body>
 </html>
+
 
 
